@@ -3,33 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Import 説明</title>
+    <title>プログラムの説明とファイル</title>
     <style>
+        /* 全体設定 */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
             margin-bottom: 20px;
         }
-        th, td {
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+        }
+
+        /* 中央寄せ */
+        .center {
+            text-align: center;
+        }
+
+        .description {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* ボタンデザイン */
+        a {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin-top: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #2980b9;
+        }
+
+        /* 画像設定 */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+
+        /* プログラムコードの表示 */
+        pre {
+            background-color: #ecf0f1;
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 15px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border-radius: 8px;
+            margin: 30px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+        }
+
+        code {
+            color: #e74c3c;
+        }
+
+        /* テーブルのデザイン */
+        table {
+            width: 90%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px;
             text-align: left;
+            border: 1px solid #ddd;
         }
+
         th {
-            background-color: #f4f4f4;
+            background-color: #2c3e50;
+            color: white;
         }
+
+        td {
+            background-color: #ecf0f1;
+            color: #333;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover td {
+            background-color: #dbe5e8;
+        }
+
         caption {
             font-weight: bold;
-            margin-bottom: 10px;
+            color: #3498db;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            a {
+                padding: 8px 16px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Java Import 説明</h1>
+    <h1>プログラムと実行結果</h1>
+
+    <h2>プログラムの概要</h2>
+    <p class="description">
+        このプログラムは、Javaで作成したカレンダーアプリケーションの機能を説明しています。
+        以下にソースコードと実行結果の画面キャプチャを掲載しています。
+    </p>
+
+    <!-- プログラムコードのダウンロードリンク -->
+    <div class="center">
+        <p>プログラムのファイルを以下からダウンロードできます。</p>
+        <a href="DigitalCalendar.java" download="DigitalCalendar.java">Download DigitalCalendar.java</a>
+    </div>
+
+    <!-- 実行結果の画像 -->
+    <h2>実行結果</h2>
+    <p class="description">以下はプログラムを実行した際の画面キャプチャです。</p>
+    <div class="center">
+        <img src="calendar.png" alt="実行結果の画像">
+    </div>
+
+    <h2>Java Import 説明</h2>
     <table>
         <caption>インポートされたクラスやパッケージの説明</caption>
         <thead>
@@ -47,85 +191,123 @@
             </tr>
             <tr>
                 <td>java.awt.Color</td>
-                <td>色を指定するためのクラス</td>
-                <td>背景色や文字色の変更</td>
+                <td>色を管理するクラス</td>
+                <td>曜日の色分けやUIの装飾</td>
             </tr>
             <tr>
                 <td>java.awt.Font</td>
-                <td>フォントのスタイルやサイズを設定するクラス</td>
-                <td>テキストのデザイン変更</td>
+                <td>フォントを管理するクラス</td>
+                <td>ボタンやラベルのテキストフォント設定</td>
             </tr>
             <tr>
                 <td>java.awt.GridLayout</td>
-                <td>格子状にコンポーネントを配置するレイアウトマネージャー</td>
-                <td>均等な配置</td>
+                <td>グリッド状にコンポーネントを配置するレイアウトマネージャー</td>
+                <td>カレンダーの曜日や日付ボタンの配置</td>
             </tr>
             <tr>
                 <td>java.time.LocalDate</td>
-                <td>日付を扱うためのクラス</td>
-                <td>今日の日付や特定の日付を取得・操作</td>
+                <td>日付（年、月、日）を表すクラス</td>
+                <td>現在の日付や特定の日付の計算</td>
             </tr>
             <tr>
                 <td>java.time.YearMonth</td>
-                <td>年と月を扱うクラス</td>
-                <td>カレンダー表示や月末日取得</td>
+                <td>年と月を表すクラス</td>
+                <td>月ごとの日数の計算</td>
             </tr>
             <tr>
                 <td>java.util.ArrayList</td>
-                <td>動的配列を提供するクラス</td>
-                <td>リスト管理</td>
+                <td>動的配列を表すクラス</td>
+                <td>スケジュールのリスト管理</td>
             </tr>
             <tr>
                 <td>java.util.HashMap</td>
-                <td>キーと値のペアを管理するマップ構造</td>
-                <td>データ検索や関連付け</td>
+                <td>キーと値のペアを管理するクラス</td>
+                <td>日付ごとのスケジュール管理</td>
             </tr>
             <tr>
                 <td>javax.swing.JButton</td>
                 <td>ボタンを表すクラス</td>
-                <td>クリック可能なボタンの作成</td>
+                <td>カレンダーの日付や操作ボタン</td>
             </tr>
             <tr>
                 <td>javax.swing.JDialog</td>
-                <td>ダイアログウィンドウを作成するクラス</td>
-                <td>ポップアップウィンドウの作成</td>
+                <td>ダイアログウィンドウを表すクラス</td>
+                <td>スケジュール追加用のポップアップ</td>
             </tr>
             <tr>
                 <td>javax.swing.JFrame</td>
-                <td>ウィンドウを作成するクラス</td>
-                <td>メインウィンドウの作成</td>
+                <td>トップレベルウィンドウを表すクラス</td>
+                <td>アプリ全体のウィンドウ</td>
             </tr>
             <tr>
                 <td>javax.swing.JLabel</td>
-                <td>ラベルを作成するクラス</td>
-                <td>テキストや画像の表示</td>
+                <td>テキストラベルを表すクラス</td>
+                <td>月名や曜日の表示</td>
             </tr>
             <tr>
                 <td>javax.swing.JPanel</td>
-                <td>コンポーネントをグループ化するコンテナクラス</td>
-                <td>コンポーネントのまとめと配置</td>
+                <td>コンポーネントをまとめるコンテナ</td>
+                <td>カレンダーやボタン配置</td>
             </tr>
             <tr>
                 <td>javax.swing.JScrollPane</td>
                 <td>スクロール可能なビューを提供するクラス</td>
-                <td>スクロールバーの追加</td>
+                <td>スケジュール表示エリア</td>
             </tr>
             <tr>
                 <td>javax.swing.JTextArea</td>
-                <td>複数行のテキスト入力・表示ができるコンポーネント</td>
-                <td>長いテキストの表示や入力</td>
+                <td>複数行のテキスト入力フィールドを表すクラス</td>
+                <td>スケジュールの表示・入力</td>
             </tr>
             <tr>
                 <td>javax.swing.SwingConstants</td>
-                <td>位置指定用の定数を提供するインターフェース</td>
-                <td>コンポーネントやテキストの配置</td>
+                <td>Swingコンポーネントで使用する定数を提供するクラス</td>
+                <td>テキストやコンポーネントの位置指定</td>
             </tr>
             <tr>
                 <td>javax.swing.SwingUtilities</td>
-                <td>Swingのスレッド関連ユーティリティクラス</td>
-                <td>GUI更新を安全に行う</td>
+                <td>Swing関連のユーティリティクラス</td>
+                <td>メインスレッドでのGUI初期化</td>
             </tr>
         </tbody>
     </table>
+
+    <h2>DigitalCalendar クラスの工夫点・機能説明</h2>
+    <table>
+        <caption>クラスの主な機能と工夫点</caption>
+        <thead>
+            <tr>
+                <th>機能/工夫</th>
+                <th>説明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>動的カレンダー表示</td>
+                <td>現在の月を基にカレンダーを動的に生成し、次月・前月への移動が可能。</td>
+            </tr>
+            <tr>
+                <td>曜日ごとの色分け</td>
+                <td>日曜日を赤、土曜日を青にして視覚的に区別しやすくしている。</td>
+            </tr>
+            <tr>
+                <td>スケジュール管理</td>
+                <td>特定の日付を選択すると、その日のスケジュールを表示・編集可能。</td>
+            </tr>
+            <tr>
+                <td>ユーザーフレンドリーなUI</td>
+                <td>ボタンやテキストエリア、スクロール可能な表示領域を組み合わせた。</td>
+            </tr>
+            <tr>
+                <td>編集ダイアログ</td>
+                <td>スケジュールを追加する際に専用のポップアップダイアログを使用。</td>
+            </tr>
+            <tr>
+                <td>リサイズ対応</td>
+                <td>カレンダーのセルや全体レイアウトがリサイズに対応。</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="index.html" class="btn btn-secondary">戻る</a>
 </body>
 </html>
